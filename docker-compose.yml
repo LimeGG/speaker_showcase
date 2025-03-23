@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15 # Выберите нужную версию PostgreSQL
+    container_name: cmsdatabase
+    ports:
+      - "5432:5432" # Связь порта контейнера с локальным портом
+    environment:
+      POSTGRES_USER: postgres         # Имя пользователя
+      POSTGRES_PASSWORD: 08092003 # Пароль пользователя
+      POSTGRES_DB: cms     # Имя создаваемой базы данных
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # Сохранение данных
+
+volumes:
+  postgres_data:

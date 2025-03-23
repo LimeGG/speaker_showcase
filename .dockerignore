@@ -1,0 +1,6 @@
+main.exe
+config.ini
+
+*.log
+*.tmp
+*.swp
